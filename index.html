@@ -1,94 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>FixYourWheels</title>
-  </head>
-  <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <img src="./pictures/Fixyourwheels_Logo_Smll.png" alt="FixYourWheels Logo" width="30" height="30">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">For Partners</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Log in</a></li>
-        <li class="nav-item"><button class="btn btn-primary">Sign up</button></li>
-      </ul>
-    </div>
-  </nav>
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
 
-  <!-- Main Section -->
-  <div class="container-fluid my-5">
-    <div class="row">
-      <!-- Left Content -->
-      <div class="col-md-7 text-center">
-        <h1><span class="text-danger">Cleaner</span> <span class="text-primary">Faster</span> and <span class="text-dark">Guaranteed</span></h1>
-        <img src="./pictures/BackgroundPics2.png" class="img-fluid rounded shadow-sm" alt="Mechanic Image">
-      </div>
+		<!-- Font Family Montserrat -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
 
-      <!-- Floating Form -->
-      <div class="col-md-5">
-        <div id="floating-form" class="p-4 bg-light border rounded">
-          <h3 class="text-danger">Trusted for the finest car service</h3>
-          <p>Receive a quick service cost assessment</p>
-          <form action="process_form.php" method="POST">
-            <select class="form-control my-2" name="brand" required>
-              <option selected disabled>Brand</option>
-              <!-- Add options here -->
-            </select>
-            <select class="form-control my-2" name="model" required>
-              <option selected disabled>Model</option>
-              <!-- Add options here -->
-            </select>
-            <input type="tel" class="form-control my-2" name="phone" placeholder="Enter Mobile Number" required>
-            <button type="submit" class="btn btn-primary btn-block">Check Price</button>
-          </form>
-          <p class="mt-3">Can't find your car? Submit an inquiry with us.</p>
-        </div>
-      </div>
-    </div>
+		<!-- Font Family Nunito -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+			rel="stylesheet"
+		/>
 
-  <!-- Contact and Location Section -->
-  <div class="row text-center mt-5">
-    <div class="col-md-6">
-      <p>Contact us now: <a href="tel:+17777777777">+1 777 777 7777</a></p>
-    </div>
-    <div class="col-md-6">
-      <p>Location: Windsor, ON</p>
-    </div>
-  </div>
-  </div>
+		<title>FixYourWheels</title>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">
+				<img
+					src="./pictures/FYWsmallLogo.png"
+					alt="FixYourWheels Logo"
+					class="navbar-logo"
+				/>
+			</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarNav"
+				aria-controls="navbarNav"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">For Partners</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Testimonials</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+				</ul>
+				<div class="navbar-right">
+					<a href="#" class="nav-link login-link">Log in</a>
+					<a href="#" class="btn btn-primary sign-up-btn">Sign up</a>
+				</div>
+			</div>
+		</nav>
 
-  <!-- About Section -->
-  <section class="container my-5" id="about">
-    <h2>About Us</h2>
-    <p>Here you can add details about the company, services offered, history, and more information.</p>
-  </section>
+		<!-- Main Section -->
+		<div class="container-fluid my-5 main-content">
+			<div class="row">
+				<!-- Left Content with Background Image -->
+				<div class="col-md-7 text-center">
+					<h1 class="headline">
+						<span class="text-danger">Cleaner</span>
+						<span class="text-primary">Faster</span>
+						<span class="text-dark">and Guaranteed</span>
+					</h1>
+					<!-- Image Below Heading -->
+					<img
+						src="./pictures/BackgroundPic1.jpg"
+						alt="Repair man"
+						class="headline-image"
+					/>
+				</div>
 
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
-  </body>
+				<!-- Right Column with Fixed Form -->
+				<div class="col-md-5">
+					<!-- Floating Form with Fixed Position -->
+					<div id="floating-form" class="p-4 bg-light border rounded">
+						<h3 class="text-danger">Trusted for the finest car service</h3>
+						<p>Receive a quick service cost assessment</p>
+						<form action="process_form.php" method="POST">
+							<select class="form-control my-2" name="brand" required>
+								<option selected disabled>Brand</option>
+								<!-- Add options here -->
+							</select>
+							<select class="form-control my-2" name="model" required>
+								<option selected disabled>Model</option>
+								<!-- Add options here -->
+							</select>
+							<input
+								type="tel"
+								class="form-control my-2"
+								name="phone"
+								placeholder="Enter Mobile Number"
+								required
+							/>
+							<button type="submit" class="btn btn-primary btn-block">
+								Check Price
+							</button>
+						</form>
+						<p class="mt-3">Can't find your car? Submit an inquiry with us.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container d-flex justify-content-start align-items-center mt-5">
+			<div class="contact-info d-flex align-items-center">
+				<img src="./icons/CallIcon.png" alt="Call Icon" class="icon" />
+				<div class="contact-text">
+					<p>Contact us now:</p>
+					<a href="tel:+17777777777">+1 777 777 7777</a>
+				</div>
+			</div>
+			<div class="separator"></div>
+			<div class="location-info d-flex align-items-center">
+				<img src="./icons/locationIcon.png" alt="Location Icon" class="icon" />
+				<div class="location-text">
+					<p>Location:</p>
+					<p>Windsor, ON</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- About Section -->
+		<section class="container my-5" id="about">
+			<h2>About Us</h2>
+			<p>
+				Lorem Ipsum is simplygi dummy text of the printing and typesetting
+				industry. Lorem Ipsum has been the industry's standard dummy text ever
+				since the 1500s, when an unknown printer took a galley of type and
+				scrambled it to make a type specimen book. It has survived not only five
+				centuries, but also the leap into electronic typesetting, remaining
+				essentially unchanged. It was popularised in the 1960s with the release
+				of Letraset sheets containing Lorem Ipsum passages, and more recently
+				with desktop publishing software like Aldus PageMaker including versions
+				of Lorem Ipsum. Why do we use it? It is a long established fact that a
+				reader will be distracted by the readable content of a page when looking
+				at its layout. The point of using Lorem Ipsum is that it has a
+				more-or-less normal distribution of letters, as opposed to using
+				'Content here, content here', making it look like readable English. Many
+				desktop publishing packages and web page editors now use Lorem Ipsum as
+				their default model text, and a search for 'lorem ipsum' will uncover
+				many web sites still in their infancy. Various versions have evolved
+				over the years, sometimes by accident, sometimes on purpose (injected
+				humour and the like). Where does it come from? Contrary to popular
+				belief, Lorem Ipsum is not simply random text. It has roots in a piece
+				of classical Latin literature from 45 BC, making it over 2000 years old.
+				Richard McClintock, a Latin professor at Hampden-Sydney College in
+				Virginia, looked up one of the more obscure Latin words, consectetur,
+				from a Lorem Ipsum passage, and going through the cites of the word in
+				classical literature, discovered the undoubtable source. Lorem Ipsum
+				comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
+				Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+				This book is a treatise on the theory of ethics, very popular during the
+				Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+				amet..", comes from a line in section 1.10.32. The standard chunk of
+				Lorem Ipsum used since the 1500s is reproduced below for those
+				interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
+				Malorum" by Cicero are also reproduced in their exact original form,
+				accompanied by English versions from the 1914 translation by H. Rackham.
+				Where can I get some?
+			</p>
+		</section>
+
+		<!-- Bootstrap JS and dependencies -->
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="script.js"></script>
+	</body>
 </html>

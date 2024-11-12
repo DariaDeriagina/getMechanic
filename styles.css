@@ -1,127 +1,214 @@
-/* General Body Styling */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+	font-family: "Montserrat", sans-serif;
+	background-color: #f1f1f1;
 }
 
-/* Navbar Styling */
+/***** Navbar Styling *****/
+/* Logo Styling */
 .navbar {
-  background-color: #ffffff;
+	padding: 0px 16px;
+	margin: 0px;
+	border-bottom: 0.5px solid #486284;
 }
 
-.navbar .navbar-nav .nav-link {
-  color: #333;
-  font-weight: 500;
+.navbar-logo {
+	width: 90px;
+	height: 90px;
 }
 
-.navbar .navbar-nav .nav-link:hover {
-  color: #007bff;
+/* Centering Navbar Links */
+.navbar-nav {
+	flex: 1;
+	justify-content: center;
 }
 
-.navbar-brand img {
-  width: 40px;
-  height: auto;
+.navbar-nav .nav-item .nav-link {
+	color: #333;
+	font-weight: 500;
+	margin: 0 3px;
 }
 
-/* Main Heading Styling */
+.navbar-nav .nav-item .nav-link:hover {
+	color: #007bff;
+	margin: 0 5px;
+}
+
+/* Right Section Styling for Log In and Sign Up */
+.navbar-right {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-right .login-link {
+	color: #333;
+	margin-right: 10px;
+	text-decoration: none;
+}
+
+.navbar-right .login-link:hover {
+	color: #007bff;
+}
+
+.navbar-right .sign-up-btn {
+	background-color: #007bff;
+	color: #ffffff;
+	border: none;
+	padding: 5px 15px;
+	border-radius: 5px;
+	font-weight: 500;
+}
+
+.navbar-right .sign-up-btn:hover {
+	background-color: #0056b3;
+}
+
+/******Main Heading Styling ******/
 h1 {
-  font-weight: bold;
-  margin-top: 20px;
-  font-size: 2.5rem;
+	font-weight: bold;
+	font-family: "Montserrat", sans-serif;
+	margin-top: 30px;
+	margin-left: 80px;
+	font-size: 52px;
 }
 
 h1 span.text-danger {
-  color: #d9534f; /* Red for "Cleaner" */
+	color: #d9534f; /* Red for "Cleaner" */
+	font-family: "Montserrat", sans-serif;
 }
 
 h1 span.text-primary {
-  color: #0275d8; /* Blue for "Faster" */
+	color: #0275d8; /* Blue for "Faster" */
+	font-family: "Montserrat", sans-serif;
 }
 
 h1 span.text-dark {
-  color: #333; /* Dark color for "Guaranteed" */
+	color: #333; /* Dark color for "Guaranteed" */
+	font-family: "Montserrat", sans-serif;
 }
 
+/* Image under the header */
+.headline-image {
+	margin-top: 20px;
+	width: 80%;
+	height: auto;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin-left: 120px;
+}
 /* Floating Form Styling */
+
 #floating-form {
-  position: sticky;
-  top: 20px;
-  padding: 30px;
-  border: 1px solid #ced4da;
-  border-radius: 8px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	top: 120px; /* Distance from the top of the viewport */
+	right: 60px; /* Adjust if needed to align it on the right */
+	width: 480px; /* Set a width for the form */
+	padding: 30px;
+	border: 1px solid #ced4da;
+	border-radius: 8px;
+	background-color: #ffffff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	z-index: 1000; /* ! the form is above other content */
+}
+
+.main-content {
+	padding-right: 340px; /* !!! space for the fixed form so content is not hidden behind it */
 }
 
 #floating-form h3 {
-  color: #d9534f;
-  font-weight: bold;
+	color: #d9534f;
+	font-weight: bold;
 }
 
 #floating-form p {
-  font-size: 1rem;
-  color: #6c757d;
+	font-size: 1rem;
+	color: #6c757d;
 }
 
 #floating-form .form-control {
-  border-radius: 4px;
-  border: 1px solid #ced4da;
+	border-radius: 4px;
+	border: 1px solid #ced4da;
 }
 
 #floating-form .btn-primary {
-  background-color: #0275d8;
-  border: none;
-  border-radius: 4px;
-  padding: 10px;
-  font-size: 1rem;
-  font-weight: bold;
+	background-color: #0275d8;
+	border: none;
+	border-radius: 4px;
+	padding: 10px;
+	font-size: 1rem;
+	font-weight: bold;
 }
 
 #floating-form .btn-primary:hover {
-  background-color: #025aa5;
+	background-color: #025aa5;
 }
 
-/* Contact & Location Section Styling */
-.row.text-center.mt-5 {
-  padding-top: 20px;
-  border-top: 1px solid #e9ecef;
+/**** Contact & Location Section Styling *****/
+/* General Styling for Icons Section */
+.container {
+	background-color: #f1f1f1;
+	padding: 10px 20px;
+	border-radius: 8px;
 }
 
-.row.text-center.mt-5 p {
-  font-size: 1.1rem;
-  color: #333;
+.contact-info,
+.location-info {
+	display: flex;
+	align-items: center;
+	margin-right: 20px;
 }
 
-.row.text-center.mt-5 a {
-  color: #0275d8;
-  text-decoration: none;
+.separator {
+	height: 30px;
+	width: 1px;
+	background-color: #b0b0b0;
+	margin: 0 15px;
 }
 
-.row.text-center.mt-5 a:hover {
-  text-decoration: underline;
+/* Icon Styling */
+.icon {
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+	background-color: #486284;
+	border-radius: 8px;
+	padding: 5px;
 }
 
-/* About Section Styling */
+/* Text Styling */
+.contact-text p,
+.location-text p {
+	margin: 0;
+	font-size: 0.9rem;
+	color: #6c757d;
+}
+
+.contact-text a,
+.location-text p:last-child {
+	font-size: 1.1rem;
+	color: #333;
+	margin: 0;
+}
+
+/*******About Section Styling *****/
 #about {
-  padding-top: 40px;
+	padding-top: 40px;
 }
 
 #about h2 {
-  font-size: 2rem;
-  color: #333;
-  font-weight: bold;
-  margin-bottom: 20px;
+	font-size: 2rem;
+	color: #333;
+	font-weight: bold;
+	margin-bottom: 20px;
 }
 
 #about p {
-  font-size: 1rem;
-  color: #6c757d;
-  line-height: 1.6;
+	font-size: 1rem;
+	color: #6c757d;
+	line-height: 1.6;
 }
 
 /* Responsive Image Styling */
 img.img-fluid {
-  border-radius: 8px;
-  margin-top: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	margin-top: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
