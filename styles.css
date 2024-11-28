@@ -3,7 +3,11 @@ body {
 	background-color: #f1f1f1;
 }
 
-/***** Navbar Styling *****/
+.text-custom-blue {
+	color: #2e698e !important;
+}
+
+/********************************************** Navbar Styling *************************************/
 /* Logo Styling */
 .navbar {
 	padding: 0px 16px;
@@ -12,8 +16,8 @@ body {
 }
 
 .navbar-logo {
-	width: 90px;
-	height: 90px;
+	width: 120px;
+	height: 80px;
 }
 
 /* Centering Navbar Links */
@@ -59,7 +63,7 @@ body {
 }
 
 .navbar-right .sign-up-btn:hover {
-	background-color: #0056b3;
+	background-color: #2e698e;
 }
 
 /******Main Heading Styling ******/
@@ -76,8 +80,8 @@ h1 span.text-danger {
 	font-family: "Montserrat", sans-serif;
 }
 
-h1 span.text-primary {
-	color: #0275d8; /* Blue for "Faster" */
+h1 .text-primary {
+	color: #2e698e !important; /* Blue for "Faster" */ /* ??*/
 	font-family: "Montserrat", sans-serif;
 }
 
@@ -187,28 +191,130 @@ h1 span.text-dark {
 	color: #333;
 	margin: 0;
 }
+/** Floating Form Button **/
+#floating-form .btn-primary {
+	background-color: #2e698e;
+	border: none;
+	border-radius: 4px;
+	padding: 10px;
+	font-size: 1rem;
+	font-weight: bold;
+}
 
-/*******About Section Styling *****/
+#floating-form .btn-primary:hover {
+	background-color: #025aa5;
+}
+
+/********************************************* About Section Styling ********************************************/
 #about {
-	padding-top: 40px;
+	background-color: #f8f9fa; /* Light grey background */
+	padding: 50px 20px;
+	border-radius: 8px;
+}
+
+#about h5 {
+	font-size: 1.2rem;
+	letter-spacing: 0.5px;
+	font-weight: bold;
 }
 
 #about h2 {
 	font-size: 2rem;
-	color: #333;
-	font-weight: bold;
-	margin-bottom: 20px;
+	font-weight: 700;
+	line-height: 1.4;
+	margin: 20px 0;
 }
 
 #about p {
 	font-size: 1rem;
-	color: #6c757d;
 	line-height: 1.6;
+	color: #6c757d;
 }
 
-/* Responsive Image Styling */
-img.img-fluid {
+/* Separator Icon Styling */
+.separator-icon {
+	width: 40px;
+	height: auto;
+}
+
+/* Image Styling */
+.about-img-main {
+	width: 100%;
 	border-radius: 8px;
-	margin-top: 20px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-img-overlay {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	width: 50%;
+	opacity: 0.5;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/** Hover effect for images **/
+.about-img-main:hover,
+.about-img-overlay:hover {
+	transform: scale(1.05);
+	transition: transform 0.3s ease-in-out;
+}
+
+/************************************ Services *****************************************************************/
+#services {
+	background-color: #f8f9fa; /* Light grey background */
+	padding: 50px 20px;
+	border-radius: 8px;
+}
+
+#services h5 {
+	font-size: 1.2rem;
+	letter-spacing: 0.5px;
+	font-weight: bold;
+}
+
+#services h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.4;
+	margin: 20px 0;
+}
+
+#services p {
+	font-size: 1rem;
+	line-height: 1.6;
+	color: #6c757d;
+}
+
+.separator-icon {
+	width: 40px;
+	height: auto;
+}
+
+/* Service Card Styling */
+.service-card {
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card .card-title {
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+/* Pagination Dots */
+.dot {
+	height: 12px;
+	width: 12px;
+	margin: 0 5px;
+	background-color: #e0e0e0; /* Light grey for inactive dots */
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.3s ease;
+}
+
+.dot.active {
+	background-color: #2e698e; /* Custom blue for active dot */
 }

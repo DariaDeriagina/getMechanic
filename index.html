@@ -28,14 +28,16 @@
 			rel="stylesheet"
 		/>
 
-		<title>FixYourWheels</title>
+		<title>GoMechanic</title>
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
 	</head>
 	<body>
 		<!-- Navbar -->
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<a class="navbar-brand" href="#">
 				<img
-					src="./pictures/FYWsmallLogo.png"
+					src="./pictures/GetMecanicLogoSmall.png"
 					alt="FixYourWheels Logo"
 					class="navbar-logo"
 				/>
@@ -141,44 +143,108 @@
 		</div>
 
 		<!-- About Section -->
-		<section class="container my-5" id="about">
-			<h2>About Us</h2>
-			<p>
-				Lorem Ipsum is simplygi dummy text of the printing and typesetting
-				industry. Lorem Ipsum has been the industry's standard dummy text ever
-				since the 1500s, when an unknown printer took a galley of type and
-				scrambled it to make a type specimen book. It has survived not only five
-				centuries, but also the leap into electronic typesetting, remaining
-				essentially unchanged. It was popularised in the 1960s with the release
-				of Letraset sheets containing Lorem Ipsum passages, and more recently
-				with desktop publishing software like Aldus PageMaker including versions
-				of Lorem Ipsum. Why do we use it? It is a long established fact that a
-				reader will be distracted by the readable content of a page when looking
-				at its layout. The point of using Lorem Ipsum is that it has a
-				more-or-less normal distribution of letters, as opposed to using
-				'Content here, content here', making it look like readable English. Many
-				desktop publishing packages and web page editors now use Lorem Ipsum as
-				their default model text, and a search for 'lorem ipsum' will uncover
-				many web sites still in their infancy. Various versions have evolved
-				over the years, sometimes by accident, sometimes on purpose (injected
-				humour and the like). Where does it come from? Contrary to popular
-				belief, Lorem Ipsum is not simply random text. It has roots in a piece
-				of classical Latin literature from 45 BC, making it over 2000 years old.
-				Richard McClintock, a Latin professor at Hampden-Sydney College in
-				Virginia, looked up one of the more obscure Latin words, consectetur,
-				from a Lorem Ipsum passage, and going through the cites of the word in
-				classical literature, discovered the undoubtable source. Lorem Ipsum
-				comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-				Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
-				This book is a treatise on the theory of ethics, very popular during the
-				Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-				amet..", comes from a line in section 1.10.32. The standard chunk of
-				Lorem Ipsum used since the 1500s is reproduced below for those
-				interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
-				Malorum" by Cicero are also reproduced in their exact original form,
-				accompanied by English versions from the 1914 translation by H. Rackham.
-				Where can I get some?
-			</p>
+		<section id="about" class="container my-5">
+			<div class="row align-items-center">
+				<!-- Left Content -->
+				<div class="col-md-6">
+					<img
+						src="./icons/separator-carsblue.png"
+						alt="Separator"
+						class="separator-icon mb-3"
+					/>
+					<h5 class="text-primary text-custom-blue">WHO WE ARE</h5>
+					<h2 class="text-dark">
+						Car Service repairs <br />
+						maintains Certified
+					</h2>
+					<p class="text-muted">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+						tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Turpis
+						egestas sed tempus urna et pulvinar semleko.
+					</p>
+				</div>
+
+				<!-- Right Images -->
+				<div class="col-md-6 position-relative">
+					<img
+						src="./pictures/AboutUsBG1.jpg"
+						alt="Car on Lift"
+						class="img-fluid rounded shadow about-img-main"
+					/>
+					<img
+						src="./pictures/AboutUsBG2.jpg"
+						alt="Mechanic Working"
+						class="img-fluid rounded about-img-overlay"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- Services section -->
+		<section id="services" class="container my-5">
+			<div class="text-center mb-4">
+				<img
+					src="./icons/separator-carsblue.png"
+					alt="Separator"
+					class="separator-icon mb-2"
+				/>
+				<h5 class="text-primary">WHO WE ARE</h5>
+				<h2 class="text-dark">EXPLORE OUR SERVICES</h2>
+				<p class="text-muted">
+					At GoMechanic, we make it easy to find and book reliable car services
+					with trusted professionals.
+				</p>
+			</div>
+			<div class="row">
+				<!-- Service 1 -->
+				<div class="col-md-4 text-center mb-4">
+					<div class="card service-card">
+						<img
+							src="./pictures/Services1.jpg"
+							class="card-img-top img-fluid"
+							alt="Service 1"
+						/>
+						<div class="card-body">
+							<h5 class="card-title text-primary">SERVICE 1</h5>
+						</div>
+					</div>
+				</div>
+				<!-- Service 2 -->
+				<div class="col-md-4 text-center mb-4">
+					<div class="card service-card">
+						<img
+							src="./pictures/Services2.jpg"
+							class="card-img-top img-fluid"
+							alt="Service 2"
+						/>
+						<div class="card-body">
+							<h5 class="card-title text-primary">SERVICE 2</h5>
+						</div>
+					</div>
+				</div>
+				<!-- Service 3 -->
+				<div class="col-md-4 text-center mb-4">
+					<div class="card service-card">
+						<img
+							src="./pictures/Services3.jpg"
+							class="card-img-top img-fluid"
+							alt="Service 3"
+						/>
+						<div class="card-body">
+							<h5 class="card-title text-primary">SERVICE 3</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Pagination Dots -->
+			<div class="text-center">
+				<span class="dot active"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+			</div>
+			<div class="text-center">
+				<a href="#" class="btn btn-outline-primary">VIEW MORE SERVICE</a>
+			</div>
 		</section>
 
 		<!-- Bootstrap JS and dependencies -->
