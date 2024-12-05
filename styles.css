@@ -3,13 +3,23 @@ body {
 	background-color: #f1f1f1;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 .text-custom-blue {
 	color: #2e698e !important;
 }
 
 /********************************************** Navbar Styling *************************************/
 /* Logo Styling */
+
 .navbar {
+	position: sticky;
+	top: 0;
+	z-index: 1030;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	background-color: #f8f9fa;
 	padding: 0px 16px;
 	margin: 0px;
 	border-bottom: 0.5px solid #486284;
@@ -32,9 +42,13 @@ body {
 	margin: 0 3px;
 }
 
+.navbar-nav .nav-item .nav-link {
+	transition: transform 0.2s ease, color 0.2s ease;
+}
+
 .navbar-nav .nav-item .nav-link:hover {
-	color: #007bff;
-	margin: 0 5px;
+	color: #025aa5;
+	transform: translateY(-2px) scale(1.1); /* Pop-up effect with scaling */
 }
 
 /* Right Section Styling for Log In and Sign Up */
@@ -54,7 +68,7 @@ body {
 }
 
 .navbar-right .sign-up-btn {
-	background-color: #007bff;
+	background-color: #2e698e;
 	color: #ffffff;
 	border: none;
 	padding: 5px 15px;
@@ -63,7 +77,7 @@ body {
 }
 
 .navbar-right .sign-up-btn:hover {
-	background-color: #2e698e;
+	background-color: #025aa5;
 }
 
 /******Main Heading Styling ******/
@@ -98,38 +112,36 @@ h1 span.text-dark {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	margin-left: 120px;
 }
-/* Floating Form Styling */
+
+/************************ Floating Form Styling *****************/
 
 #floating-form {
 	position: fixed;
-	top: 120px; /* Distance from the top of the viewport */
-	right: 60px; /* Adjust if needed to align it on the right */
-	width: 480px; /* Set a width for the form */
+	top: 120px;
+	right: 60px;
+	width: 480px;
 	padding: 30px;
 	border: 1px solid #ced4da;
 	border-radius: 8px;
 	background-color: #ffffff;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	z-index: 1000; /* ! the form is above other content */
-}
-
-.main-content {
-	padding-right: 340px; /* !!! space for the fixed form so content is not hidden behind it */
-}
-
-#floating-form h3 {
-	color: #d9534f;
-	font-weight: bold;
-}
-
-#floating-form p {
-	font-size: 1rem;
-	color: #6c757d;
+	z-index: 1000;
+	text-align: center;
 }
 
 #floating-form .form-control {
 	border-radius: 4px;
 	border: 1px solid #ced4da;
+	padding-right: 2.5rem; /* Add space to prevent text/arrow from overlapping */
+	box-sizing: border-box; /* Keep padding within the width */
+}
+
+#floating-form select {
+	appearance: none; /* Remove default dropdown arrow styling */
+	background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="%236c757d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpolyline points="6 9 12 15 18 9"%3E%3C/polyline%3E%3C/svg%3E');
+	background-repeat: no-repeat;
+	background-position: right 10px center; /* Position custom arrow */
+	background-size: 12px;
 }
 
 #floating-form .btn-primary {
@@ -145,10 +157,21 @@ h1 span.text-dark {
 	background-color: #025aa5;
 }
 
+.inquiry-link {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+.inquiry-link:hover {
+	color: #0275d8;
+	text-decoration: underline;
+}
+
 /**** Contact & Location Section Styling *****/
 /* General Styling for Icons Section */
-.container {
-	background-color: #f1f1f1;
+.container-contact {
+	background: linear-gradient(#b9cdd929, #48628433); /* Gradient colors */
 	padding: 10px 20px;
 	border-radius: 8px;
 }
@@ -203,6 +226,17 @@ h1 span.text-dark {
 
 #floating-form .btn-primary:hover {
 	background-color: #025aa5;
+}
+
+.location-link {
+	text-decoration: none; /* Remove underline */
+	color: inherit; /* Ensure it matches the surrounding text */
+	display: flex; /* Keep icon and text aligned horizontally */
+	align-items: center; /* Vertically center-align content */
+}
+
+.location-link:hover {
+	text-decoration: underline; /* Optional: Add underline on hover */
 }
 
 /********************************************* About Section Styling ********************************************/
@@ -262,16 +296,19 @@ h1 span.text-dark {
 }
 
 /************************************ Services *****************************************************************/
+/* Services Section */
 #services {
 	background-color: #f8f9fa; /* Light grey background */
 	padding: 50px 20px;
 	border-radius: 8px;
 }
 
+/* Section Header */
 #services h5 {
 	font-size: 1.2rem;
 	letter-spacing: 0.5px;
 	font-weight: bold;
+	color: #2e698e;
 }
 
 #services h2 {
@@ -279,42 +316,106 @@ h1 span.text-dark {
 	font-weight: 700;
 	line-height: 1.4;
 	margin: 20px 0;
+	color: #2e698e; /* Custom blue */
 }
 
 #services p {
 	font-size: 1rem;
 	line-height: 1.6;
-	color: #6c757d;
-}
-
-.separator-icon {
-	width: 40px;
-	height: auto;
+	color: #6c757d; /* Muted grey */
 }
 
 /* Service Card Styling */
 .service-card {
 	border: none;
 	border-radius: 8px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+	background-color: #ffffff; /* White card background */
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.service-card:hover {
+	transform: translateY(-5px); /* Lift slightly on hover */
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.service-card img {
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	width: 100%;
 }
 
 .service-card .card-title {
 	font-size: 1rem;
 	font-weight: 600;
+	color: #2e698e;
+	margin-top: 10px;
+	text-transform: uppercase;
 }
 
-/* Pagination Dots */
-.dot {
-	height: 12px;
-	width: 12px;
-	margin: 0 5px;
-	background-color: #e0e0e0; /* Light grey for inactive dots */
-	border-radius: 50%;
-	display: inline-block;
-	transition: background-color 0.3s ease;
+/* View More Card */
+.view-more-card {
+	border: 1px solid #2e698e; /* Custom blue border */
+	border-radius: 8px;
+	background-color: #ffffff;
+	height: 100%; /* Match the height of service cards */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.dot.active {
-	background-color: #2e698e; /* Custom blue for active dot */
+.view-more-card:hover {
+	transform: translateY(-5px); /* Slight lift on hover */
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.view-more-card .btn-outline-primary {
+	font-size: 1rem;
+	font-weight: bold;
+	border-radius: 50px; /* Rounded button */
+	padding: 10px 20px;
+	border: 2px solid #2e698e;
+	color: #2e698e;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-more-card .btn-outline-primary:hover {
+	background-color: #2e698e;
+	color: #ffffff; /* White text on hover */
+}
+
+/* Floating form adjustments for mobi*******************************************************************************/
+@media (max-width: 768px) {
+	#floating-form {
+		position: static;
+		width: 100%;
+		margin: 0 auto;
+		padding: 15px;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	#floating-form h3 {
+		font-size: 1.2rem;
+		text-align: center;
+	}
+
+	#floating-form p {
+		font-size: 0.9rem;
+		text-align: center;
+	}
+
+	#floating-form .form-control {
+		width: 100%;
+		font-size: 0.9rem;
+		margin-bottom: 10px;
+	}
+
+	#floating-form .btn-primary {
+		width: 100%;
+		font-size: 1rem;
+		padding: 10px;
+		margin-top: 10px;
+	}
 }

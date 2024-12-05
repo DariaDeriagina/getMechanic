@@ -55,9 +55,11 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav mx-auto">
-					<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+					<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+					<li class="nav-item">
+						<a class="nav-link" href="#services">Services</a>
+					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">For Partners</a>
 					</li>
@@ -75,7 +77,7 @@
 		</nav>
 
 		<!-- Main Section -->
-		<div class="container-fluid my-5 main-content">
+		<div id="home" class="container-fluid my-5 main-content">
 			<div class="row">
 				<!-- Left Content with Background Image -->
 				<div class="col-md-7 text-center">
@@ -118,13 +120,19 @@
 								Check Price
 							</button>
 						</form>
-						<p class="mt-3">Can't find your car? Submit an inquiry with us.</p>
+						<p class="mt-3">
+							<a href="inquiry_form.html" class="inquiry-link"
+								>Can't find your car? Submit an inquiry with us.</a
+							>
+						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="container d-flex justify-content-start align-items-center mt-5">
+		<div
+			class="container-contact d-flex justify-content-start align-items-center mt-5"
+		>
 			<div class="contact-info d-flex align-items-center">
 				<img src="./icons/CallIcon.png" alt="Call Icon" class="icon" />
 				<div class="contact-text">
@@ -134,15 +142,26 @@
 			</div>
 			<div class="separator"></div>
 			<div class="location-info d-flex align-items-center">
-				<img src="./icons/locationIcon.png" alt="Location Icon" class="icon" />
-				<div class="location-text">
-					<p>Location:</p>
-					<p>Windsor, ON</p>
-				</div>
+				<a
+					href="https://www.google.com/maps/place/Windsor,+ON"
+					target="_blank"
+					class="location-link"
+				>
+					<img
+						src="./icons/locationIcon.png"
+						alt="Location Icon"
+						class="icon"
+					/>
+					<div class="location-text">
+						<p>Location:</p>
+						<p>Windsor, ON</p>
+					</div>
+				</a>
+				<!-- Properly closing the anchor tag -->
 			</div>
 		</div>
 
-		<!-- About Section -->
+		<!-- ABOUT SECTION -->
 		<section id="about" class="container my-5">
 			<div class="row align-items-center">
 				<!-- Left Content -->
@@ -171,79 +190,77 @@
 						alt="Car on Lift"
 						class="img-fluid rounded shadow about-img-main"
 					/>
-					<img
-						src="./pictures/AboutUsBG2.jpg"
-						alt="Mechanic Working"
-						class="img-fluid rounded about-img-overlay"
-					/>
 				</div>
 			</div>
 		</section>
 
-		<!-- Services section -->
-		<section id="services" class="container my-5">
-			<div class="text-center mb-4">
-				<img
-					src="./icons/separator-carsblue.png"
-					alt="Separator"
-					class="separator-icon mb-2"
-				/>
-				<h5 class="text-primary">WHO WE ARE</h5>
-				<h2 class="text-dark">EXPLORE OUR SERVICES</h2>
-				<p class="text-muted">
-					At GoMechanic, we make it easy to find and book reliable car services
-					with trusted professionals.
-				</p>
-			</div>
+		<!-- SERVICES SECTION-->
+		<section id="services-section" class="container-fluid">
 			<div class="row">
-				<!-- Service 1 -->
-				<div class="col-md-4 text-center mb-4">
-					<div class="card service-card">
-						<img
-							src="./pictures/Services1.jpg"
-							class="card-img-top img-fluid"
-							alt="Service 1"
-						/>
-						<div class="card-body">
-							<h5 class="card-title text-primary">SERVICE 1</h5>
+				<!-- Left Column: Services Section -->
+				<div class="col-md-6">
+					<div class="text-center mb-4">
+						<h5 class="text-primary">WHO WE ARE</h5>
+						<h2 class="text-dark">EXPLORE OUR SERVICES</h2>
+						<p class="text-muted">
+							At GoMechanic, we make it easy to find and book reliable car
+							services with trusted professionals.
+						</p>
+					</div>
+					<div class="row">
+						<!-- Service 1 -->
+						<div class="col-md-6 text-center mb-4">
+							<div class="card service-card">
+								<img
+									src="./pictures/Services1.jpg"
+									class="card-img-top rounded"
+									alt="Service 1"
+								/>
+								<div class="card-body">
+									<h5 class="card-title text-primary">SERVICE 1</h5>
+								</div>
+							</div>
+						</div>
+						<!-- Service 2 -->
+						<div class="col-md-6 text-center mb-4">
+							<div class="card service-card">
+								<img
+									src="./pictures/Services2.jpg"
+									class="card-img-top rounded"
+									alt="Service 2"
+								/>
+								<div class="card-body">
+									<h5 class="card-title text-primary">SERVICE 2</h5>
+								</div>
+							</div>
+						</div>
+						<!-- Service 3 -->
+						<div class="col-md-6 text-center mb-4">
+							<div class="card service-card">
+								<img
+									src="./pictures/Services3.jpg"
+									class="card-img-top rounded"
+									alt="Service 3"
+								/>
+								<div class="card-body">
+									<h5 class="card-title text-primary">SERVICE 3</h5>
+								</div>
+							</div>
+						</div>
+						<!-- View More Button -->
+						<div class="col-md-6 text-center">
+							<div class="card view-more-card">
+								<div
+									class="card-body d-flex justify-content-center align-items-center"
+								>
+									<a href="#" class="btn btn-outline-primary"
+										>VIEW MORE SERVICES</a
+									>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<!-- Service 2 -->
-				<div class="col-md-4 text-center mb-4">
-					<div class="card service-card">
-						<img
-							src="./pictures/Services2.jpg"
-							class="card-img-top img-fluid"
-							alt="Service 2"
-						/>
-						<div class="card-body">
-							<h5 class="card-title text-primary">SERVICE 2</h5>
-						</div>
-					</div>
-				</div>
-				<!-- Service 3 -->
-				<div class="col-md-4 text-center mb-4">
-					<div class="card service-card">
-						<img
-							src="./pictures/Services3.jpg"
-							class="card-img-top img-fluid"
-							alt="Service 3"
-						/>
-						<div class="card-body">
-							<h5 class="card-title text-primary">SERVICE 3</h5>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Pagination Dots -->
-			<div class="text-center">
-				<span class="dot active"></span>
-				<span class="dot"></span>
-				<span class="dot"></span>
-			</div>
-			<div class="text-center">
-				<a href="#" class="btn btn-outline-primary">VIEW MORE SERVICE</a>
 			</div>
 		</section>
 
