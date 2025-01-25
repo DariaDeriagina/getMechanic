@@ -1,3 +1,4 @@
+/* Coding by Daria Deriagina */
 body {
 	font-family: "Montserrat", sans-serif;
 	background-color: #f1f1f1;
@@ -11,7 +12,9 @@ html {
 	color: #2e698e !important;
 }
 
-/********************************************** Navbar Styling *************************************/
+/* ===================================
+   MARK: NavBar Styling
+   =================================== */
 /* Logo Styling */
 
 .navbar {
@@ -113,7 +116,9 @@ h1 span.text-dark {
 	margin-left: 120px;
 }
 
-/************************ Floating Form Styling *****************/
+/* ===================================
+   MARK: Floating window 
+   =================================== */
 
 #floating-form {
 	position: fixed;
@@ -127,6 +132,14 @@ h1 span.text-dark {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	z-index: 1000;
 	text-align: center;
+}
+/* Position the container relative to its parent */
+.col-md-5 {
+	position: relative; /* Needed for positioning the form */
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-end; /* Align form to the right */
 }
 
 #floating-form .form-control {
@@ -168,7 +181,9 @@ h1 span.text-dark {
 	text-decoration: underline;
 }
 
-/**** Contact & Location Section Styling *****/
+/* ===================================
+   MARK: Contact & Location Section Styling 
+   =================================== */
 /* General Styling for Icons Section */
 .container-contact {
 	background: linear-gradient(#b9cdd929, #48628433); /* Gradient colors */
@@ -239,11 +254,14 @@ h1 span.text-dark {
 	text-decoration: underline; /* Optional: Add underline on hover */
 }
 
-/********************************************* About Section Styling ********************************************/
+/* ===================================
+   MARK: Contact & Location Section Styling 
+   =================================== */
 #about {
 	background-color: #f8f9fa; /* Light grey background */
-	padding: 50px 20px;
+	padding: 20px 20px;
 	border-radius: 8px;
+	margin-left: 1rem;
 }
 
 #about h5 {
@@ -295,43 +313,48 @@ h1 span.text-dark {
 	transition: transform 0.3s ease-in-out;
 }
 
-/************************************ Services *****************************************************************/
-/* Services Section */
-#services {
-	background-color: #f8f9fa; /* Light grey background */
+/* ===================================
+   MARK: Services 
+   =================================== */
+/* General Section Styling*/
+#services-section {
+	background-color: #f8f9fa;
 	padding: 50px 20px;
-	border-radius: 8px;
 }
 
-/* Section Header */
-#services h5 {
+#services-section h5 {
 	font-size: 1.2rem;
 	letter-spacing: 0.5px;
 	font-weight: bold;
-	color: #2e698e;
+	color: #2e698e; /* Custom blue color */
 }
 
-#services h2 {
+#services-section h2 {
 	font-size: 2rem;
 	font-weight: 700;
 	line-height: 1.4;
+	color: #2e698e;
 	margin: 20px 0;
-	color: #2e698e; /* Custom blue */
 }
 
-#services p {
+#services-section p {
 	font-size: 1rem;
-	line-height: 1.6;
-	color: #6c757d; /* Muted grey */
+	color: #6c757d; /* Muted grey text */
 }
 
-/* Service Card Styling */
+/*  Service Card Styling*/
 .service-card {
 	border: none;
-	border-radius: 8px;
+	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-	background-color: #ffffff; /* White card background */
-	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card img {
+	width: 100%;
+	height: auto;
+	border-bottom: 2px solid #f1f1f1; /* Bottom border for the image */
 }
 
 .service-card:hover {
@@ -339,53 +362,35 @@ h1 span.text-dark {
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
-.service-card img {
-	border-bottom-left-radius: 8px;
-	border-bottom-right-radius: 8px;
-	width: 100%;
-}
-
 .service-card .card-title {
 	font-size: 1rem;
 	font-weight: 600;
 	color: #2e698e;
-	margin-top: 10px;
-	text-transform: uppercase;
+	text-transform: uppercase; /* Uppercase title */
 }
 
-/* View More Card */
-.view-more-card {
-	border: 1px solid #2e698e; /* Custom blue border */
-	border-radius: 8px;
-	background-color: #ffffff;
-	height: 100%; /* Match the height of service cards */
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+/* Pagination Dots Styling*/
+.pagination-dot {
+	width: 12px;
+	height: 12px;
+	margin: 0 5px;
+	background-color: #d9d9d9;
+	border-radius: 50%; /* Circular dots */
+	transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-.view-more-card:hover {
-	transform: translateY(-5px); /* Slight lift on hover */
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+.pagination-dot.active {
+	background-color: #2e698e; /* Active dot color */
 }
 
-.view-more-card .btn-outline-primary {
-	font-size: 1rem;
-	font-weight: bold;
-	border-radius: 50px; /* Rounded button */
-	padding: 10px 20px;
-	border: 2px solid #2e698e;
-	color: #2e698e;
-	transition: background-color 0.3s ease, color 0.3s ease;
+.pagination-dot:hover {
+	cursor: pointer;
+	background-color: #025aa5; /* Hover color */
 }
 
-.view-more-card .btn-outline-primary:hover {
-	background-color: #2e698e;
-	color: #ffffff; /* White text on hover */
-}
-
-/* Floating form adjustments for mobi*******************************************************************************/
+/* ===================================
+   MARK: Floating form adjustments for mobile 
+   =================================== */
 @media (max-width: 768px) {
 	#floating-form {
 		position: static;
@@ -417,5 +422,8 @@ h1 span.text-dark {
 		font-size: 1rem;
 		padding: 10px;
 		margin-top: 10px;
+	}
+	.service-card {
+		flex: 0 0 100%; /* Full width for mobile */
 	}
 }
